@@ -20,7 +20,6 @@ func (s *Store) User() store.UserRepository {
 	if s.userRepository != nil {
 		return s.userRepository
 	}
-
 	return &UserRepository{
 		store: s,
 		users: make(map[int]*model.User),
